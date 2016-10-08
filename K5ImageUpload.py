@@ -1,5 +1,30 @@
 #!/usr/bin/python
-
+# Author : Graham Land
+# Date:    08/10/2016
+#
+# Purpose: Upload a custom image to K5 Object Storage and then register with K5 Glance  
+#          If the image is greater than 1GB it will be broken down into 1GB chunks
+#          and then uploaded
+#          Command line parameters - 
+#          -i image_path
+#          -c container_name
+#          -s chunk_size (bytes)
+#          -n display_name
+#          -t image_type 
+#          -p project
+#
+# Prerequisites: k5contractsettings.py file in the same directory with login details
+#
+# adminUser = 'username'
+# adminPassword = 'password'
+# contract = 'contract_name'
+# contractid = 'contract_id'
+# defaultid = 'default_project_id'
+# project = 'working_project'
+# region = 'uk-1'
+#
+# blog:    https://allthingscloud.eu
+# twitter: @allthingsclowd
 
 import sys
 import os

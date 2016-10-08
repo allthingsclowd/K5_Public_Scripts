@@ -1,4 +1,24 @@
 #!/usr/bin/python
+# Author : Graham Land
+# Date:    08/10/2016
+#
+# Purpose: Share a custom image from the default project to a member project in K5
+#          Command line parameters - 
+#          -i image_id
+#          -p member_project
+#
+# Prerequisites: k5contractsettings.py file in the same directory with login details
+#
+# adminUser = 'username'
+# adminPassword = 'password'
+# contract = 'contract_name'
+# contractid = 'contract_id'
+# defaultid = 'default_project_id'
+# project = 'working_project'
+# region = 'uk-1'
+#
+# blog:    https://allthingscloud.eu
+# twitter: @allthingsclowd
 
 
 import sys
@@ -11,7 +31,6 @@ import getopt
 import ntpath
 # load your K5 contract details from k5contractsettings.py file
 from k5contractsettings import *
-
 
 
 # get a scoped auth token
